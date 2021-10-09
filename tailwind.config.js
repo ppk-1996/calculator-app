@@ -1,0 +1,48 @@
+module.exports = {
+  purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      fontFamily: {
+        spartan: "'Spartan', sans-serif",
+      },
+      colors: {
+        mainBackground: "hsl(222, 26%, 31%)",
+        keypadBackground: "hsl(223, 31%, 20%)",
+        screenBackground: "hsl(224, 36%, 15%)",
+        keyBackground: "hsl(225, 21%, 49%)",
+        keyShadow: "hsl(224, 28%, 35%)",
+        red: "hsl(6, 63%, 50%)",
+        darkRed: "hsl(6, 70%, 34%)",
+        lightGrayOrange: "hsl(30, 25%, 89%)",
+        grayOrange: "hsl(28, 16%, 65%)",
+        darkGrayBlue: "hsl(221, 14%, 31%)",
+        white: "hsl(0, 100%, 100%)",
+        // lightGray: "",
+        // grayRed: "",
+        // veryLightGray: "",
+        // darkModerateCyan: "",
+        // veryDarkCyan: "",
+        // orange: "",
+        // darkOrange: "",
+        // lightGrayYellow: "",
+        // darkGrayOrange: "",
+        // darkGrayYellow: "",
+        // backgroundVeryDarkViolet: "",
+        // keypadVeryDarkViolet: "",
+        // darkViolet: "",
+        // vividMagenta: "",
+        // pureCyan: "",
+        // softCyan: "",
+        // keyVeryDarkViolet: "",
+        // darkMagenta: "",
+        // lightYellow: "",
+        // veryDarkBlue: "",
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+};
