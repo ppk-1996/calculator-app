@@ -1,9 +1,14 @@
-const Keypad = ({ setUserText, userText }: keypadProps) => {
+const Keypad = ({
+  displayText,
+  deleteUserText,
+  computeString,
+  resetText,
+}: keypadProps) => {
   return (
     <div className="bg-skin-keypad rounded-xl mt-8 py-6 px-10 ">
       <div className="flex justify-between">
         <button
-          onClick={() => setUserText(userText + '7')}
+          onClick={() => displayText('7')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -11,7 +16,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '8')}
+          onClick={() => displayText('8')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -19,7 +24,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '9')}
+          onClick={() => displayText('9')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -27,7 +32,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText.slice(0, -1))}
+          onClick={() => deleteUserText()}
           className="bg-skin-del-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-del w-full h-full rounded-lg text-center pt-5 text-base text-skin-del">
@@ -37,7 +42,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
       </div>
       <div className="flex justify-between mt-4">
         <button
-          onClick={() => setUserText(userText + '4')}
+          onClick={() => displayText('4')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -45,7 +50,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '5')}
+          onClick={() => displayText('5')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -53,7 +58,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '6')}
+          onClick={() => displayText('6')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -61,7 +66,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '+')}
+          onClick={() => displayText('+')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -71,7 +76,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
       </div>
       <div className="flex justify-between mt-4">
         <button
-          onClick={() => setUserText(userText + '1')}
+          onClick={() => displayText('1')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -79,7 +84,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '2')}
+          onClick={() => displayText('2')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -87,7 +92,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '3')}
+          onClick={() => displayText('3')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -95,7 +100,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '-')}
+          onClick={() => displayText('-')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -105,7 +110,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
       </div>
       <div className="flex justify-between mt-4">
         <button
-          onClick={() => setUserText(userText + '.')}
+          onClick={() => displayText('.')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -113,7 +118,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '0')}
+          onClick={() => displayText('0')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -121,7 +126,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '/')}
+          onClick={() => displayText('/')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -129,7 +134,7 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
           </div>
         </button>
         <button
-          onClick={() => setUserText(userText + '*')}
+          onClick={() => displayText('*')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
           <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
@@ -138,12 +143,18 @@ const Keypad = ({ setUserText, userText }: keypadProps) => {
         </button>
       </div>
       <div className="flex justify-between mt-4">
-        <button className="bg-skin-del-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 mr-2">
+        <button
+          onClick={() => resetText()}
+          className="bg-skin-del-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 mr-2"
+        >
           <div className="bg-skin-del w-full h-full rounded-lg text-center pt-4 text-lg">
             RESET
           </div>
         </button>
-        <button className="bg-skin-toggle-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 ml-3">
+        <button
+          onClick={() => computeString()}
+          className="bg-skin-toggle-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 ml-3"
+        >
           <div className="bg-skin-toggle w-full h-full rounded-lg text-center pt-4 text-base">
             =
           </div>

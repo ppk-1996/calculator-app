@@ -6,13 +6,16 @@ import Keypad from './components/Keypad'
 
 function App() {
   const [theme, setTheme] = useState(0)
+  const [shouldSaveTheme, setShouldSaveTheme] = useState(false)
   useEffect(() => {
     let storedTheme = localStorage.getItem('theme')
     storedTheme && setTheme(parseInt(storedTheme))
   }, [])
   useEffect(() => {
-    localStorage.setItem('theme', theme.toString())
-  }, [theme])
+    if (shouldSaveTheme) {
+      localStorage.setItem('theme', theme.toString())
+    }
+  }, [theme, shouldSaveTheme])
   const toggleTheme = () => {
     if (theme < 2) {
       setTheme(theme + 1)
@@ -27,17 +30,7 @@ function App() {
   const handleUserKeyPress = useCallback(
     (e) => {
       if (/[0-9]|\+|\-|\.|\/|\*/.test(e.key)) {
-        if (!finished) {
-          setUserText((prevUserText) => `${prevUserText}${e.key}`)
-        } else {
-          if (/[0-9]/.test(e.key)) {
-            setUserText(e.key)
-            setFinished(false)
-          } else {
-            setUserText((prevUserText) => `${prevUserText}${e.key}`)
-            setFinished(false)
-          }
-        }
+        displayText(e.key)
       } else if (e.key == 'Delete' || e.key == 'Backspace') {
         deleteUserText()
       } else if (e.key == 'Enter') {
@@ -55,6 +48,19 @@ function App() {
       window.removeEventListener('keydown', handleUserKeyPress)
     }
   }, [handleUserKeyPress])
+
+  const displayText = (text: string) => {
+    if (!finished) {
+      setUserText((prevUserText) => `${prevUserText}${text}`)
+    } else {
+      if (/[0-9]/.test(text)) {
+        setUserText(text)
+      } else {
+        setUserText((prevUserText) => `${prevUserText}${text}`)
+      }
+      setFinished(false)
+    }
+  }
 
   const deleteUserText = () => {
     if (typeof userText == 'string') {
@@ -81,14 +87,30 @@ function App() {
   }
   return (
     <main className={`${THEMES[theme]}`}>
-      <div className="h-screen flex items-center">
+      <div className="h-screen flex flex-col justify-center items-center">
         <div
           className="mx-auto p-8  bg-skin-main rounded-3xl shadow-lg"
           style={{ width: 460 }}
         >
           <Header toggleTheme={toggleTheme} theme={theme} setTheme={setTheme} />
           <Screen result={userText} />
-          <Keypad setUserText={setUserText} userText={userText} />
+          <Keypad
+            displayText={displayText}
+            computeString={computeString}
+            resetText={resetText}
+            deleteUserText={deleteUserText}
+          />
+        </div>
+        <div className="text-sm mt-3">
+          <label className="flex items-center">
+            <input
+              onChange={() => setShouldSaveTheme(!shouldSaveTheme)}
+              type="checkbox"
+              name="theme-default"
+              className="mr-2"
+            />
+            use current theme as default
+          </label>
         </div>
       </div>
     </main>

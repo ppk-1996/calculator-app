@@ -16,10 +16,9 @@
 ### The challenge
 
 Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Switch between viewing Daily, Weekly, and Monthly stats
+- Use the calculator to do basic arithmetic.
+- Change the calculator to three different themes
+- Themes will be remembered for next usage if user check the 
 
 ### Screenshot
 
@@ -77,7 +76,7 @@ I couldn't figured out how to add white overlay when hover on the card. So I jus
 
 ### Useful resources
 
-- [StackOverFlow Answer by Evan Almeida](https://stackoverflow.com/a/66593793) - This helped me with the bug where the tailwind colors are not working in production.
+- [StackOverFlow Answer by Dji](https://stackoverflow.com/a/39874526) - This helped the calculator screen to handle overflow text properly.
 
 ## Author
 

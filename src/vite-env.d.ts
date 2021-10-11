@@ -8,6 +8,8 @@ type screenProps = {
   result: string
 }
 type keypadProps = {
-  setUserText: (text: string) => void
-  userText: string
+  displayText: (text: string) => void
+  deleteUserText: () => void
+  computeString: () => void
+  resetText: () => void
 }
