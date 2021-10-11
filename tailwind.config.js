@@ -1,3 +1,11 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+function withOpacity(variableName) {
+  return ({ opacityValue=1 }) => {
+      return `rgba(var(${variableName}), ${opacityValue})`
+  }
+}
+
 module.exports = {
   purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -6,40 +14,27 @@ module.exports = {
       fontFamily: {
         spartan: "'Spartan', sans-serif",
       },
-      colors: {
-        mainBackground: "hsl(222, 26%, 31%)",
-        keypadBackground: "hsl(223, 31%, 20%)",
-        screenBackground: "hsl(224, 36%, 15%)",
-        keyBackground: "hsl(225, 21%, 49%)",
-        keyShadow: "hsl(224, 28%, 35%)",
-        red: "hsl(6, 63%, 50%)",
-        darkRed: "hsl(6, 70%, 34%)",
-        lightGrayOrange: "hsl(30, 25%, 89%)",
-        grayOrange: "hsl(28, 16%, 65%)",
-        darkGrayBlue: "hsl(221, 14%, 31%)",
-        white: "hsl(0, 100%, 100%)",
-        // lightGray: "",
-        // grayRed: "",
-        // veryLightGray: "",
-        // darkModerateCyan: "",
-        // veryDarkCyan: "",
-        // orange: "",
-        // darkOrange: "",
-        // lightGrayYellow: "",
-        // darkGrayOrange: "",
-        // darkGrayYellow: "",
-        // backgroundVeryDarkViolet: "",
-        // keypadVeryDarkViolet: "",
-        // darkViolet: "",
-        // vividMagenta: "",
-        // pureCyan: "",
-        // softCyan: "",
-        // keyVeryDarkViolet: "",
-        // darkMagenta: "",
-        // lightYellow: "",
-        // veryDarkBlue: "",
+      textColor: {
+        skin: {
+          header: withOpacity('--color-text-header'),
+          num: withOpacity('--color-text-num'),
+          del: withOpacity('--color-text-del'),
+        },
       },
-    },
+      backgroundColor: {
+        skin: {
+          main: withOpacity('--color-main-bg'),
+          keypad: withOpacity('--color-keypad-bg'),
+          screen: withOpacity('--color-screen-bg'),
+          toggle: withOpacity('--color-toggle'),
+          'toggle-shadow': withOpacity('--color-toggle-shadow'),
+          num: withOpacity('--color-num'),
+          'num-shadow': withOpacity('--color-num-shadow'),
+          del: withOpacity('--color-del'),
+          'del-shadow': withOpacity('--color-del-shadow'),                    
+        },
+      },
+    }
   },
   variants: {
     extend: {},
