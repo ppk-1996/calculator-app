@@ -18,16 +18,16 @@
 Users should be able to:
 - Use the calculator to do basic arithmetic.
 - Change the calculator to three different themes
-- Themes will be remembered for next usage if user check the 
+- Themes will be remembered for next usage if user check the default theme checkbox
 
 ### Screenshot
 
-![](./design/screenshot.jpg)
+![](./design/screenshot.png)
 
 ### Links
 
-- Solution URL: [Github](https://github.com/ppk-1996/time-tracking-app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/ppk-1996/calculator-app)
+- Live Site URL: [Add live site URL here](https://calculator-app-lyart.vercel.app/)
 
 ## My process
 
@@ -36,47 +36,27 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
+- Regex
 - [React](https://reactjs.org/) - JS library
+- [TypeScript](https://www.typescriptlang.org/) - JS with syntax for types
 - [Tailwind](https://tailwindcss.com/) - CSS framework
 
 ### What I learned
 
-I'm using the same react component for every activity as well as for daily, monthly and yearly data. The following show the code from Card.jsx component which render card with dynamic colors, text, and images. You can see the empty div before the img which cut out the top part of the image as a styling.
+- Event listener can be be used with useEffect and useCallback in React to achieve smooth keyboard experience for the calculator.
+- Tailwind can utilize CSS variables to create different themes easily
+- direction rtl in CSS
 
-```JSX
-   <div className="md:col-span-1 pt-3 relative z-20 w-full">
-      <section className={`${color} rounded-xl pt-10 relative z-10`}>
-        <div className="absolute -top-2.5 right-7 z-20 bg-veryDarkBlue w-1/2 h-2.5"></div>
-        <img src={getImage(title)} className="absolute -top-2 right-3 z-10" />
-
-        <div className="p-6 rounded-lg bg-darkBlue relative z-10  hover:opacity-90">
-          <div className="flex justify-between relative">
-            <h2 className="text-lg font-medium">{title}</h2>
-            <button className="w-4 hover:opacity-80" type="button">
-              <img src={ellipsis} className="object-contain" />
-            </button>
-          </div>
-          <div className="flex justify-between items-center md:block">
-            <p className="text-3xl font-light">{current}hrs</p>
-
-            <p className="text-sm text-desaturatedBlue">
-              {previousText} - {previous}hrs
-            </p>
-          </div>
-        </div>
-      </section>
-    </div>
-```
 
 ### Continued development
 
-I couldn't figured out how to add white overlay when hover on the card. So I just use opacity-80 when hover. I will come back to this project when I found the solution.
+The theme toggle icon can be clicked to toggle between three themes but choosing specific theme can't be done by the toggle button. So I added the onClick listner on the numbers to achieve that behaviour.
 
 ### Useful resources
 
 - [StackOverFlow Answer by Dji](https://stackoverflow.com/a/39874526) - This helped the calculator screen to handle overflow text properly.
+- [Theming Tailwind with CSS Variables](https://www.youtube.com/watch?v=MAtaT8BZEAo&t=428s)
+- [StackOverFlow Answer by Shubham Khatri](https://stackoverflow.com/a/55566585) - Keydown listener utilizing useEffect and useCallback.
 
 ## Author
 
