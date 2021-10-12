@@ -49,8 +49,7 @@ Users should be able to:
 
 
 ### Continued development
-
-The theme toggle icon can be clicked to toggle between three themes but choosing specific theme can't be done by the toggle button. So I added the onClick listner on the numbers to achieve that behaviour.
+All done I think XD
 
 ### Useful resources
 

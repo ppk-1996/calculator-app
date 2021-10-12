@@ -11,33 +11,33 @@ const Keypad = ({
           onClick={() => displayText('7')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             7
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('8')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             8
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('9')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             9
-          </div>
+          </span>
         </button>
         <button
           onClick={() => deleteUserText()}
           className="bg-skin-del-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-del w-full h-full rounded-lg text-center pt-5 text-base text-skin-del">
+          <span className="bg-skin-del w-full h-full rounded-lg text-center pt-5 text-base text-skin-del block">
             DEL
-          </div>
+          </span>
         </button>
       </div>
       <div className="flex justify-between mt-4">
@@ -45,33 +45,33 @@ const Keypad = ({
           onClick={() => displayText('4')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             4
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('5')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             5
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('6')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             6
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('+')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             +
-          </div>
+          </span>
         </button>
       </div>
       <div className="flex justify-between mt-4">
@@ -79,33 +79,33 @@ const Keypad = ({
           onClick={() => displayText('1')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             1
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('2')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             2
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('3')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             3
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('-')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             -
-          </div>
+          </span>
         </button>
       </div>
       <div className="flex justify-between mt-4">
@@ -113,33 +113,33 @@ const Keypad = ({
           onClick={() => displayText('.')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             .
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('0')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             0
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('/')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             /
-          </div>
+          </span>
         </button>
         <button
           onClick={() => displayText('*')}
           className="bg-skin-num-shadow pb-1 rounded-lg  h-16 w-16"
         >
-          <div className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num">
+          <span className="bg-skin-num w-full h-full rounded-lg text-center pt-2 text-skin-num block">
             x
-          </div>
+          </span>
         </button>
       </div>
       <div className="flex justify-between mt-4">
@@ -147,17 +147,17 @@ const Keypad = ({
           onClick={() => resetText()}
           className="bg-skin-del-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 mr-2"
         >
-          <div className="bg-skin-del w-full h-full rounded-lg text-center pt-4 text-lg">
+          <span className="bg-skin-del w-full h-full rounded-lg text-center pt-4 text-lg block">
             RESET
-          </div>
+          </span>
         </button>
         <button
           onClick={() => computeString()}
           className="bg-skin-toggle-shadow pb-1 rounded-lg text-skin-del h-16 w-1/2 ml-3"
         >
-          <div className="bg-skin-toggle w-full h-full rounded-lg text-center pt-4 text-base">
+          <span className="bg-skin-toggle w-full h-full rounded-lg text-center pt-4 text-base block">
             =
-          </div>
+          </span>
         </button>
       </div>
     </div>

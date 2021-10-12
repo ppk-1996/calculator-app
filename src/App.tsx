@@ -9,7 +9,7 @@ function App() {
   const [shouldSaveTheme, setShouldSaveTheme] = useState(false)
   useEffect(() => {
     let storedTheme = localStorage.getItem('theme')
-    storedTheme && setTheme(parseInt(storedTheme))
+    // storedTheme && setTheme(parseInt(storedTheme))
   }, [])
   useEffect(() => {
     if (shouldSaveTheme) {
